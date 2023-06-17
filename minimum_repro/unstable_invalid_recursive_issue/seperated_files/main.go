@@ -12,9 +12,9 @@ type T1[T any] struct {
 	e *innerT[T, *T1[T]]
 }
 
-//type T2[T any] struct {
-//	e *innerT[T, *T2[T]]
-//}
+type T2[T any] struct {
+	e *innerT[T, *T2[T]]
+}
 
 func main() {
 	fmt.Println("didnt panic")
