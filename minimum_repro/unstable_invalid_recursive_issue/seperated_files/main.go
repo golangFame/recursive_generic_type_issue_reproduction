@@ -5,8 +5,10 @@ import "fmt"
 // It doesn't matter if the innerT struct unexported or exported, the result is the same.
 // It also doesn't matter if the R type parameter is infer to a pointer or not, the result is the same.
 
-// go: nosplit
-type innerT[T any, R *T1[T] | *T2[T]] struct {
+type constraint[T any] interface {
+	*T1[T] | *T2[T]
+}
+type innerT[T any, R constraint[T]] struct {
 	Ref R
 }
 
