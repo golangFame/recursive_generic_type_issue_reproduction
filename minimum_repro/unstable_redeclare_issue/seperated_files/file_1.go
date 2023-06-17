@@ -1,4 +1,6 @@
-package seperated_files
+package main
+
+import "fmt"
 
 // It doesn't matter if the innerT struct unexported or exported, the result is the same.
 // It also doesn't matter if the R type parameter is infer to a pointer or not, the result is the same.
@@ -12,4 +14,8 @@ type T1[T any] struct {
 
 type T2[T any] struct {
 	e *innerT[T, T2[T]]
+}
+
+func main() {
+	fmt.Println("didn't panic")
 }
