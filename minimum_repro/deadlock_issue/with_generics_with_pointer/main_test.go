@@ -1,4 +1,4 @@
-package with_generics_test
+package main
 
 import (
 	"os"

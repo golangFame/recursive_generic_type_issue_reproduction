@@ -1,10 +1,8 @@
-package with_generics_test
+package main
 
 import (
 	"os"
 	"testing"
-
-	"github.com/nekomeowww/recursive_generic_type_issue_reproduction/minimum_repro/deadlock_issue/with_generics"
 )
 
 func TestMain(m *testing.M) {
@@ -12,5 +10,5 @@ func TestMain(m *testing.M) {
 }
 
 func TestT1(t *testing.T) {
-	_ = with_generics.T1[any]{}
+	_ = T1[any]{}
 }
